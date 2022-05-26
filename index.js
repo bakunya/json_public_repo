@@ -84,7 +84,7 @@ async function bootstrappingAllScrapeProcess() {
 
 async function main() {
     app.use(limiter)
-    app.use(cors(delegate(['http://localhost:3000'], true)))
+    app.use(cors(delegate(['http://localhost:3000', 'https://bakunya.herokuapp.com', 'https://bakunya.pages.dev', 'https://bakunya.netlify.app'], true)))
 
     app.get('/', async (req, res) => {
         try {
