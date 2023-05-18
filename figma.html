@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
 
@@ -14,6 +15,35 @@
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@figma">
+    <meta name="twitter:title" content="uts">
+    <meta name="twitter:player"
+        content="https://www.figma.com/embed?embed_host=twitter&amp;url=https://www.figma.com/file/iwkJia5LhWWayXzDNs6R80/uts?type=design&amp;node-id=1-2&amp;t=ZFFQoW7Oo7Vwu7md-0">
+    <meta name="twitter:player:width" content="800">
+    <meta name="twitter:player:height" content="450">
+    <meta name="twitter:image"
+        content="https://www.figma.com/file/iwkJia5LhWWayXzDNs6R80/thumbnail?ver=thumbnails/a76d9fcb-cccc-473d-ac9a-6b680e472976">
+
+    <meta property="og:url" content="https://www.figma.com/file/iwkJia5LhWWayXzDNs6R80/uts">
+    <meta property="og:description" content="Created with Figma">
+    <meta property="og:image"
+        content="https://www.figma.com/file/iwkJia5LhWWayXzDNs6R80/thumbnail?ver=thumbnails/a76d9fcb-cccc-473d-ac9a-6b680e472976">
+    <meta property="og:image:width" content="370">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:user_generated" content="true">
+    <meta property="og:type" content="article">
+    <meta property="og:article:published_time" content="2023-05-15 03:35:31 UTC">
+    <meta property="og:article:modified_time" content="2023-05-18 11:55:07 UTC">
+    <meta property="og:article:section" content="Design">
+    <meta name="is_serving_resized_image" content="true">
+
+    <meta name="description" content="Created with Figma">
+
+    <link rel="alternate" type="application/json+oembed"
+        href="https://www.figma.com/api/oembed?url=https://www.figma.com/file/iwkJia5LhWWayXzDNs6R80/uts?type=design&amp;node-id=1-2&amp;t=ZFFQoW7Oo7Vwu7md-0"
+        title="OEmbed">
 
     <meta property="og:title" content="Figma">
     <meta property="og:site_name" content="Figma">
@@ -23,6 +53,7 @@
     <link rel="icon" sizes="128x128" href="https://static.figma.com/uploads/b6df2735e4cb368306acf5480b50f96e69f96099">
 
     <link rel="icon" type="image/png" href="https://static.figma.com/app/icon/1/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" href="https://static.figma.com/app/icon/1/favicon.ico" type="image/vnd.microsoft.icon" /><![endif]-->
     <link rel="icon" sizes="any" type="image/svg+xml" href="https://static.figma.com/app/icon/1/favicon.svg">
 
     <link rel="apple-touch-icon" sizes="76x76" href="https://static.figma.com/app/icon/1/touch-76.png">
@@ -33,19 +64,78 @@
 
     <link rel="manifest" href="https://static.figma.com/app/manifest.json">
 
+    <script type="text/javascript" async="" nonce="" crossorigin="anonymous"
+        src="https://static.figma.com/fullscreen/590f88fe8252a41f2a23f50af43ff438a5690c92/fullscreen-wasm/compiled_wasm.js.br"></script>
+    <script type="text/javascript" async="" nonce="" crossorigin="anonymous"
+        src="https://static.figma.com/fullscreen/6d4d71c88eb33444c96af84c34675f655a0febb9/import/import.shim.js.br"></script>
     <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+        .platform_cursor_default {
+            cursor: default !important;
         }
-        img {
-            width: 100vw;
-            height: auto;
+    </style>
+    <style>
+        .platform_cursor_pointer {
+            cursor: pointer !important;
+        }
+    </style>
+    <style>
+        .platform_cursor_crosshair {
+            cursor: crosshair !important;
+        }
+    </style>
+    <style>
+        .platform_cursor_text {
+            cursor: text !important;
+        }
+    </style>
+    <style>
+        .platform_cursor_ew-resize {
+            cursor: ew-resize !important;
+        }
+    </style>
+    <style>
+        .platform_cursor_ns-resize {
+            cursor: ns-resize !important;
+        }
+    </style>
+    <style>
+        .platform_cursor_s-resize {
+            cursor: s-resize !important;
+        }
+    </style>
+    <style>
+        .platform_cursor_e-resize {
+            cursor: e-resize !important;
+        }
+    </style>
+    <style>
+        body._lcxmdv8y4tk *,
+        ._lcxmdv8y4tk {
+            cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEJElEQVRYR+1WXUhTYRg+yzYr1KajnIY5sQVOFnrljb95ITgNRW8kRSWvgsBFKEjgDynWiEkEXcRAEIVQp/jThUzmtgt3QFRqZBca1vJnTXNmc+rUel/ZZNrZ5tmZYrAPXs7Ot+/nOc/zPu/3sYhz3ljnHB8RAMhUof+SwaDV1dW7PB5PC1+/D7HneDIlw6f5xxnE9+CFhYUHkZGRLfB8Ghsb2w59WxC7EH982oXBpOMAL8BaIa2trXdqa2t1uO7m5uaMUqksLSsrm4HXHQejDLakN5WKwat5eXm3BwcHyfb2diIrK2sfWLxgMpkUfD7/CSxvg7CflexUJgmDzW+srKy87+joEEilUqK6upqQy+XI5vLi4uJzoVCoOCvZqQBegc2jp6amZBsbG5L09HQ2isLlcg9AVlRUEFarlezr63t4FrJTAQwGPNc7OzvL8/Pz68PCwi66Zk1SUhLR399PJTvmp99NRAUwCDbipaWlibVarSo5OZmYnp7+J7Odsq+vr89CWXodHx/vKjs9J3gYTQUQ+7gQMZBzZF1d3aW2tjbKJVxlN5vNvaOjo80lJSWfYfC2v0zk7iQJRaMYjcZelUolqqys9MgIyj4wMGCPiYlhLy0tyaOjoxtd3M5IdncAL8MGUWCUl3FxcfeAKayPXpur7FDkmxMTE7sdbGKR96m5A8hBo3R1dZWDZM9YrJMf2QKB4MDtBQUFBORmD0mSTRKJBGXH2km7udv5REY57u7MzEwEtofGAvcHQTky7ezsaIaHh6uhJJl8yUt3AJ1GuQlG0VMZBQ2CgDIyMojs7Gy7WCxmw9jt5eVl4/z8/IehoSE1MEkCKAT2E2LTnwCRnEOjTExMiAoLC4/IgzJWVVXZ4Qj8Njc3Z+jp6SHHx8eNBoNhBQZaITYg1iF+QfyG8KlOekout0ZB5tRqNQGXiK6ioqJ3DiAICs9pDCwzeANCUBhoEry20W6eAB4xSnh4OGGxWA6OPI1Gs8tmsw0ikQgvDyghMuW8RKAZnIB8AuX6FZ4AHjEK3GqIsbExoqGhgaipqdlKTU29Pzk5+QkW++GQFEHhBZdR3TtOsSeAhyfK2tqaurGxMQKPPLiG2XU6XUdubu4rWGwBwuJgjLZ8J5ngrcCFwCJ4oihnZ2dFERERuxwO52NCQsIj6P8KgYbAXDu15g0gGoWv1+ubUlJSSm0221Z9ff1jmUw2Cv1LDmlR1lNr3gCiUa51d3eXFhcXt46MjLzNycl5A33fHdL6dDrQ+RpvANEoXMi3WwqF4kVUVJQU3s0u0vrVEFTAvQHE//GGHdrS0iKEE+UL/MYCjIX3VKV1gvUGEMfhjRqlxieWEpT11KWlAxA/whko6ZkwRwcgnZz2+9iTSOz3TeksGABIhy1fygzT9RnPD0jMlMIAg0wZ/AtvTqQ4amRIGAAAAABJRU5ErkJggg==")5 5, auto !important;
+            cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij48aW1hZ2UgeGxpbms6aHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDZ0FBQUFvQ0FZQUFBQ00vcmh0QUFBRUpFbEVRVlJZUisxV1hVaFRZUmcreXpZcjFLYWpuSVk1c1FWT0ZucmxqYjk1SVRnTlJXOGtSU1d2Z3NCRktFamdEeW5XaUVrRVhjUkFFSVZRcC9qVGhVem10Z3QzUUZScVpCY2ExdkpuVFhObWMrclVlbC9aWk5yWjV0bVpZckFQWHM3T3QrL25PYy96UHUvM3NZaHozbGpuSEI4UkFNaFVvZitTd2FEVjFkVzdQQjVQQzErL0Q3SG5lRElsdzZmNXh4bkU5K0NGaFlVSGtaR1JMZkI4R2hzYjJ3NTlXeEM3RUg5ODJvWEJwT01BTDhCYUlhMnRyWGRxYTJ0MXVPN201dWFNVXFrc0xTc3JtNEhYSFFlakRMYWtONVdLd2F0NWVYbTNCd2NIeWZiMmRpSXJLMnNmV0x4Z01wa1VmRDcvQ1N4dmc3Q2ZsZXhVSmdtRHpXK3NyS3k4Nytqb0VFaWxVcUs2dXBxUXkrWEk1dkxpNHVKem9WQ29PQ3ZacVFCZWdjMmpwNmFtWkJzYkc1TDA5SFEyaXNMbGNnOUFWbFJVRUZhcmxlenI2M3Q0RnJKVEFRd0dQTmM3T3p2TDgvUHo2OFBDd2k2NlprMVNVaExSMzk5UEpUdm1wOTlOUkFVd0NEYmlwYVdsaWJWYXJTbzVPWm1ZbnA3K0o3T2RzcSt2cjg5Q1dYb2RIeC92S2pzOUozZ1lUUVVRKzdnUU1aQnpaRjFkM2FXMnRqYktKVnhsTjV2TnZhT2pvODBsSlNXZllmQzJ2MHprN2lRSlJhTVlqY1plbFVvbHFxeXM5TWdJeWo0d01HQ1BpWWxoTHkwdHlhT2pveHRkM001SWRuY0FMOE1HVVdDVWwzRnhjZmVBS2F5UFhwdXI3RkRrbXhNVEU3c2RiR0tSOTZtNUE4aEJvM1IxZFpXRFpNOVlySk1mMlFLQjRNRHRCUVVGQk9SbUQwbVNUUktKQkdYSDJrbTd1ZHY1UkVZNTd1N016RXdFdG9mR0F2Y0hRVGt5N2V6c2FJYUhoNnVoSkpsOHlVdDNBSjFHdVFsRzBWTVpCUTJDZ0RJeU1vanM3R3k3V0N4bXc5anQ1ZVZsNC96OC9JZWhvU0UxTUVrQ0tBVDJFMkxUbndDUm5FT2pURXhNaUFvTEM0L0lnekpXVlZYWjRRajhOamMzWitqcDZTSEh4OGVOQm9OaEJRWmFJVFlnMWlGK1FmeUc4S2xPZWtvdXQwWkI1dFJxTlFHWGlLNmlvcUozRGlBSUNzOXBEQ3d6ZUFOQ1VCaG9FcnkyMFc2ZUFCNHhTbmg0T0dHeFdBNk9QSTFHczh0bXN3MGlrUWd2RHlnaE11VzhSS0FabklCOEF1WDZGWjRBSGpFSzNHcUlzYkV4b3FHaGdhaXBxZGxLVFUyOVB6azUrUWtXKytHUUZFSGhCWmRSM1R0T3NTZUFoeWZLMnRxYXVyR3hNUUtQUExpRzJYVTZYVWR1YnU0cldHd0J3dUpnakxaOEo1bmdyY0NGd0NKNG9paG5aMmRGRVJFUnV4d081Mk5DUXNJajZQOEtnWWJBWER1MTVnMGdHb1d2MSt1YlVsSlNTbTAyMjFaOWZmMWptVXcyQ3YxTERtbFIxbE5yM2dDaVVhNTFkM2VYRmhjWHQ0Nk1qTHpOeWNsNUEzM2ZIZEw2ZERyUStScHZBTkVvWE1pM1d3cUY0a1ZVVkpRVTNzMHUwdnJWRUZUQXZRSEUvL0dHSGRyUzBpS0VFK1VML01ZQ2pJWDNWS1YxZ3ZVR0VNZmhqUnFseGllV0VwVDExS1dsQXhBL3doa282Wmt3UndjZ25aejIrOWlUU096M1Rla3NHQUJJaHkxZnlnelQ5Um5QRDBqTWxNSUFnMHdaL0F0dlRxUTRhbVJJR0FBQUFBQkpSVTVFcmtKZ2dnPT0iIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIvPjwvc3ZnPg==)5 5, auto !important;
+            cursor: -webkit-image-set(url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEJElEQVRYR+1WXUhTYRg+yzYr1KajnIY5sQVOFnrljb95ITgNRW8kRSWvgsBFKEjgDynWiEkEXcRAEIVQp/jThUzmtgt3QFRqZBca1vJnTXNmc+rUel/ZZNrZ5tmZYrAPXs7Ot+/nOc/zPu/3sYhz3ljnHB8RAMhUof+SwaDV1dW7PB5PC1+/D7HneDIlw6f5xxnE9+CFhYUHkZGRLfB8Ghsb2w59WxC7EH982oXBpOMAL8BaIa2trXdqa2t1uO7m5uaMUqksLSsrm4HXHQejDLakN5WKwat5eXm3BwcHyfb2diIrK2sfWLxgMpkUfD7/CSxvg7CflexUJgmDzW+srKy87+joEEilUqK6upqQy+XI5vLi4uJzoVCoOCvZqQBegc2jp6amZBsbG5L09HQ2isLlcg9AVlRUEFarlezr63t4FrJTAQwGPNc7OzvL8/Pz68PCwi66Zk1SUhLR399PJTvmp99NRAUwCDbipaWlibVarSo5OZmYnp7+J7Odsq+vr89CWXodHx/vKjs9J3gYTQUQ+7gQMZBzZF1d3aW2tjbKJVxlN5vNvaOjo80lJSWfYfC2v0zk7iQJRaMYjcZelUolqqys9MgIyj4wMGCPiYlhLy0tyaOjoxtd3M5IdncAL8MGUWCUl3FxcfeAKayPXpur7FDkmxMTE7sdbGKR96m5A8hBo3R1dZWDZM9YrJMf2QKB4MDtBQUFBORmD0mSTRKJBGXH2km7udv5REY57u7MzEwEtofGAvcHQTky7ezsaIaHh6uhJJl8yUt3AJ1GuQlG0VMZBQ2CgDIyMojs7Gy7WCxmw9jt5eVl4/z8/IehoSE1MEkCKAT2E2LTnwCRnEOjTExMiAoLC4/IgzJWVVXZ4Qj8Njc3Z+jp6SHHx8eNBoNhBQZaITYg1iF+QfyG8KlOekout0ZB5tRqNQGXiK6ioqJ3DiAICs9pDCwzeANCUBhoEry20W6eAB4xSnh4OGGxWA6OPI1Gs8tmsw0ikQgvDyghMuW8RKAZnIB8AuX6FZ4AHjEK3GqIsbExoqGhgaipqdlKTU29Pzk5+QkW++GQFEHhBZdR3TtOsSeAhyfK2tqaurGxMQKPPLiG2XU6XUdubu4rWGwBwuJgjLZ8J5ngrcCFwCJ4oihnZ2dFERERuxwO52NCQsIj6P8KgYbAXDu15g0gGoWv1+ubUlJSSm0221Z9ff1jmUw2Cv1LDmlR1lNr3gCiUa51d3eXFhcXt46MjLzNycl5A33fHdL6dDrQ+RpvANEoXMi3WwqF4kVUVJQU3s0u0vrVEFTAvQHE//GGHdrS0iKEE+UL/MYCjIX3VKV1gvUGEMfhjRqlxieWEpT11KWlAxA/whko6ZkwRwcgnZz2+9iTSOz3TeksGABIhy1fygzT9RnPD0jMlMIAg0wZ/AtvTqQ4amRIGAAAAABJRU5ErkJggg==")1.25x, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEJElEQVRYR+1WXUhTYRg+yzYr1KajnIY5sQVOFnrljb95ITgNRW8kRSWvgsBFKEjgDynWiEkEXcRAEIVQp/jThUzmtgt3QFRqZBca1vJnTXNmc+rUel/ZZNrZ5tmZYrAPXs7Ot+/nOc/zPu/3sYhz3ljnHB8RAMhUof+SwaDV1dW7PB5PC1+/D7HneDIlw6f5xxnE9+CFhYUHkZGRLfB8Ghsb2w59WxC7EH982oXBpOMAL8BaIa2trXdqa2t1uO7m5uaMUqksLSsrm4HXHQejDLakN5WKwat5eXm3BwcHyfb2diIrK2sfWLxgMpkUfD7/CSxvg7CflexUJgmDzW+srKy87+joEEilUqK6upqQy+XI5vLi4uJzoVCoOCvZqQBegc2jp6amZBsbG5L09HQ2isLlcg9AVlRUEFarlezr63t4FrJTAQwGPNc7OzvL8/Pz68PCwi66Zk1SUhLR399PJTvmp99NRAUwCDbipaWlibVarSo5OZmYnp7+J7Odsq+vr89CWXodHx/vKjs9J3gYTQUQ+7gQMZBzZF1d3aW2tjbKJVxlN5vNvaOjo80lJSWfYfC2v0zk7iQJRaMYjcZelUolqqys9MgIyj4wMGCPiYlhLy0tyaOjoxtd3M5IdncAL8MGUWCUl3FxcfeAKayPXpur7FDkmxMTE7sdbGKR96m5A8hBo3R1dZWDZM9YrJMf2QKB4MDtBQUFBORmD0mSTRKJBGXH2km7udv5REY57u7MzEwEtofGAvcHQTky7ezsaIaHh6uhJJl8yUt3AJ1GuQlG0VMZBQ2CgDIyMojs7Gy7WCxmw9jt5eVl4/z8/IehoSE1MEkCKAT2E2LTnwCRnEOjTExMiAoLC4/IgzJWVVXZ4Qj8Njc3Z+jp6SHHx8eNBoNhBQZaITYg1iF+QfyG8KlOekout0ZB5tRqNQGXiK6ioqJ3DiAICs9pDCwzeANCUBhoEry20W6eAB4xSnh4OGGxWA6OPI1Gs8tmsw0ikQgvDyghMuW8RKAZnIB8AuX6FZ4AHjEK3GqIsbExoqGhgaipqdlKTU29Pzk5+QkW++GQFEHhBZdR3TtOsSeAhyfK2tqaurGxMQKPPLiG2XU6XUdubu4rWGwBwuJgjLZ8J5ngrcCFwCJ4oihnZ2dFERERuxwO52NCQsIj6P8KgYbAXDu15g0gGoWv1+ubUlJSSm0221Z9ff1jmUw2Cv1LDmlR1lNr3gCiUa51d3eXFhcXt46MjLzNycl5A33fHdL6dDrQ+RpvANEoXMi3WwqF4kVUVJQU3s0u0vrVEFTAvQHE//GGHdrS0iKEE+UL/MYCjIX3VKV1gvUGEMfhjRqlxieWEpT11KWlAxA/whko6ZkwRwcgnZz2+9iTSOz3TeksGABIhy1fygzT9RnPD0jMlMIAg0wZ/AtvTqQ4amRIGAAAAABJRU5ErkJggg==")1x)5 5, auto !important;
         }
     </style>
 </head>
+
+
+<link rel="manifest" href="https://static.figma.com/app/manifest.json">
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    img {
+        width: 100vw;
+        height: auto;
+    }
+</style>
+</head>
+
 <body>
     <img src="https://raw.githubusercontent.com/bakunya/bakunya.github.io/master/img_1_1684318639846.jpg" alt="">
 </body>
