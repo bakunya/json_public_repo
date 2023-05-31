@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Contoh Line Chart dengan Garis Horizontal dan Vertikal di Sumbu X dan Y</title>
+   <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+   <svg id="chart"></svg>
+   <script>
+      var colors = ["gray", "black", "brown", "blue", "red", "green", "yellow", "orange"]
+      var data = Array.from(Array(1000).keys()).map((_, i) => ({
+         v: (Math.round(Math.random() * 500)),
+         id: i,
+         i,
+      }))
+      var scaleX = d3.scaleLinear().domain([0, d3.max(data, c => c.i)]).range([0, 500])
+      var scaleY = d3.scaleLinear().domain([0, d3.max(data, c => c.v)]).range([500, 0])
+      var axisX = d3.axisBottom(scaleX)
+      var axisY = d3.axisLeft(scaleY)
+
+      var svg = d3.select("body").append("svg").attr("width", 600).attr("height", 600).attr("id", "svg")
+      svg.append("g").attr("transform", "translate(50, 510)").call(axisX)
+      svg.append("g").attr("transform", "translate(50, 10)").call(axisY)
+      
+      svg.selectAll("line.chart").data(data).enter().append("line")
+         .attr("x1", d => scaleX(d.i))
+         .attr("y1", d => scaleY(d.v))
+         .attr("x2", d => scaleX(d.i))
+         .attr("y2", 500)
+         .attr("id", d => `ss-${d.id}`)
+         .attr("stroke", d => colors[Math.round(Math.random() * (colors.length - 1))])
+         .attr("transform", "translate(50, 10)")
+
+      async function blocking(tm) {
+         return new Promise(r => setTimeout(() => { r() }, tm))
+      }
+
+      async function bubbleSort(arr, callback) {
+         var len = arr.length;
+         var swapped;
+
+         do {
+            swapped = false;
+
+            for (var i = 0; i < len - 1; i++) {
+               if (arr[i].v > arr[i + 1].v) {
+                  callback(arr[i], arr[i + 1], i)
+
+                  // Tukar posisi elemen jika elemen sekarang lebih besar dari elemen berikutnya
+                  var temp = arr[i];
+                  arr[i] = arr[i + 1];
+                  arr[i + 1] = temp;
+
+                  swapped = true;
+               }
+            }
+         } while (swapped);
+
+         return arr;
+      }
+
+      setTimeout(() => {
+         bubbleSort(data, (curr, next, i) => {
+            setTimeout(() => {
+               svg.select(`line#ss-${curr.id}`).attr("x1", scaleX(next.i)).attr("x2", scaleX(next.i)).attr("y1", scaleY(curr.v)).attr("y2", 500)
+               svg.select(`line#ss-${next.id}`).attr("x1", scaleX(curr.i)).attr("x2", scaleX(curr.i)).attr("y1", scaleY(next.v)).attr("y2", 500)
+               const tmp = curr.i
+               curr.i = next.i
+               next.i = tmp
+            }, 5);
+         })
+      }, 1000);
+
+   </script>
+</body>
+
+</html>
