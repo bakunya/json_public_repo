@@ -2,6 +2,14 @@
   "FileReferences": {
     "Moc": "21miku_band.moc3",
     "Motions": {
+      
+      "test_angry": [
+        {
+          "FadeInTime": 0.5,
+          "FadeOutTime": 0.5,
+          "File": "motions/test_angry.motion3.json"
+        }
+      ],
       "face_night_surprise_01": [
         {
           "FadeInTime": 0.5,
