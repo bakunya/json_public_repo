@@ -2,7 +2,6 @@
   "FileReferences": {
     "Moc": "21miku_band.moc3",
     "Motions": {
-      
       "test_angry": [
         {
           "FadeInTime": 0.5,
